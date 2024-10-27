@@ -1,0 +1,89 @@
+
+header {
+    height: 100px;
+    background-color: #0f0f0f;
+    box-shadow: 0 0 10px black;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #050003;
+    background-image: linear-gradient(
+        225deg,
+        #050003 0%,
+        #130c3f 50%,
+        #050003 100%
+    );
+}
+
+header .logo {
+    background: url(assets/images/ABC_logo.png);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 200px;
+    object-fit: cover;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    margin: 0 5px;
+}
+.line-anime::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: scale(0);
+    transition: all 0.7s;
+    transform-origin: left;
+}
+.line-anime:hover::before {
+    transform: scaleX(1);
+}
+.line-anime::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: scale(0);
+    transition: all 0.7s;
+    transform-origin: right;
+}
+.line-anime:hover::after {
+    transform: scaleX(1);
+}
+section h2 {
+    font-family: cursive;
+    font-size: 45px;
+    margin-top: -10px;
+    padding-bottom: 20px;
+}
